@@ -1,0 +1,483 @@
+    
+console.log("Hello from JavaScript");
+//comment line
+/* multipule comment lines
+comment lines
+*/
+var a;
+var b;
+var c;
+a=10;
+b=20;
+c=100;
+var d=a+b+c;
+console.log(d);
+var e=11-d;
+console.log(e);
+var f=e*10;
+console.log(f);
+var g=a/100;
+console.log(g);
+
+var aa=100;
+var quotient=aa/10;
+var remainder=aa%17;
+console.log(quotient);
+console.log(remainder);
+
+c="I am a super star"
+console.log(c);
+var d=" I am also a shining"
+var r=c+d;
+console.log(r);
+var myName=10;
+var MYNAme=100;
+var sum=0;
+var sum1=0;
+sum=sum+myName;
+console.log(sum);
+sum1=sum1+MYNAme;
+console.log(sum1);
+
+const pi=3.14;
+var increment=0;
+increment=increment+1;
+console.log(increment++);
+console.log(increment);
+
+var decrement=10;
+decrement=decrement-1;
+decrement--;
+
+var ourDecimal =5.7;
+var myDecimal=0.0000;
+var product=ourDecimal*myDecimal;
+console.log(product);
+
+var a=10;
+a=a+100;
+a+=100;
+console.log(a);
+
+var firstName="sakku";
+var lastName="Ram";
+
+var myString="I am a \"student\" "+firstName+" "+lastName+" at vanier";
+console.log(myString);
+
+var newString="First Line \\n Second Line \\n Third Line";
+console.log(newString);
+
+//concatenate strings
+var ourStr="I come first "+" I come second";
+var newStr="I am at Vanier";
+newStr+=ourStr;
+
+var newStrlength=0;
+newStrlength=newStr.length;
+console.log(newStrlength);
+
+//accessing characters of a string
+var myNewName="sakkaravarthi";
+var myFirstCharacter=myNewName[5];
+console.log(myFirstCharacter);
+var myLastCharacter=myNewName[myNewName.length-1];
+console.log(myLastCharacter);
+
+var myLastCharacter=myNewName[myNewName.length-4];
+console.log(myLastCharacter);
+
+function wordBlank(myNoun,myAdjective,myVerb,myAdverb){
+    var result="";
+    result+=" The "+myAdjective+" "+myNoun+" "+myVerb+" "+myAdverb;
+    return result;
+    
+}
+
+console.log(wordBlank("dog","big","ran","quickly"));
+
+//store multiple values with arrays
+var ourArray=["john",23];
+var myArray=[];
+console.log(ourArray[0]);
+console.log(myArray[1]);
+
+//nested arrays
+var ourNestArray=[["sakku",10],["nir","bav"],[10,20]];
+console.log(ourNestArray[0]);
+console.log(ourNestArray[1][0]);
+
+var ourNestArray=[["sakku",10],["nir","bav"],[[10,20,"vanier",100],10],100];
+console.log(ourNestArray[0]);
+console.log(ourNestArray[1][0]);
+console.log(ourNestArray[2][0][2]);
+
+//modify the values of Arrays
+var anyArray=[50,50];
+anyArray[1]=100;
+console.log(anyArray)
+
+//can we modify the characters in strings
+var myNewString="Javascript";
+myNewString="python";
+console.log(myNewString);
+
+//array using Push()
+var myPushArray=["Montreal","canada"];
+myPushArray.push(["super","quebec"]);
+console.log(myPushArray);
+
+//Arrays using pop
+var myPopArray=["A","B","c"];
+console.log(myPopArray.pop());
+console.log(myPopArray.pop());
+console.log(myPopArray.pop());
+console.log(myPopArray.pop());
+
+//arrays with shift
+var myShiftArray=["AA","BB"];
+console.log(myShiftArray.shift());
+console.log(myShiftArray);
+
+//arrays with unshift
+var myUnshiftArray=["AAA","ddd"];
+myUnshiftArray.unshift("happy");
+console.log(myUnshiftArray);
+
+//function
+function ourReuse(){
+    console.log("Hey World");
+    
+}
+ourReuse();
+
+//function with arguments
+var test="666";
+function ourReuseArguments(a,b){
+    var sum=0;
+    sum=a+b;
+    console.log(test);   
+    console.log(sum);   
+}
+ourReuseArguments(10,100);
+
+//function with return 
+function returnDemo(a,b,c){
+    var add=0;
+    add=a+b-c;
+    return add;
+}
+console.log(returnDemo(100,200,50));
+
+//scope of variables,visibility of variable,Global/local variable
+var myGlobal=10;
+function fun1(){
+    var OopsGlobal=100;
+}
+function fun2(){
+    var output="";
+    var output1="";
+    if(typeof myGlobal!="undefined"){
+        output="Myglobal value is "+myGlobal; 
+    }
+    if(typeof OopsGlobal=="undefined"){
+        output1="The OopsGlobal is undefined";
+    }
+    console.log(output);
+    console.log(output1);
+}
+fun2();
+var global =37;
+var localvar=46;
+function vartest(){
+    window.localvar=46;
+}
+function vartest2(){
+    var output="";
+    if(typeof global !="37"){
+        output="Myglobal value is "+global;
+    }
+    if(typeof localvar !="46"){
+        output="Myglobal value is "+localvar ;
+    }
+    console.log(output);
+}
+vartest2();
+
+
+function myLocal1(){
+    var myVa=5;
+    console.log(myVa);
+}
+myLocal1();
+
+//local and global
+var outerWear="T-shirt";
+function shirt(){
+    var outerWear="Shirt";
+    return outerWear;
+}
+
+console.log(shirt());
+
+function shirt1(){  
+    return outerWear;
+}
+console.log(shirt1());
+
+//return 
+function returnDemo(num){
+    return num-10;
+}
+console.log(returnDemo(100));
+
+//undefined value returned by a function
+var sum=0;
+function addThree(){
+    sum+=3;
+    console.log(sum);
+}
+addThree();
+
+var changed=0;
+function varchanged(num){
+    return(num+5)/3;
+}
+changed=varchanged(10);
+console.log(changed);
+
+//queue
+function nextInLine(arr,item){
+    arr.push(item);
+    return arr.shift();
+}
+var testArray=[1,2,3,4,5];
+console.log("before:"+JSON.stringify(testArray));
+console.log(nextInLine(testArray,6));
+console.log("before:"+JSON.stringify(testArray));
+
+//boolean values
+function welcomeBoolean(){
+    return false;
+}
+
+//logical IF statements
+function ourTorF(isit){
+    if(isit){
+        return "yes,it is true";
+    }
+    return "no,it is not true";   
+}
+console.log(ourTorF(-1));
+
+//write a program to check a number is even or odd
+function evenOrOdd(num){
+    if(num%2==0){
+        console.log("it is even");
+    }
+    else{
+        console.log("it is odd");
+    }
+}
+evenOrOdd('0');
+
+//STRICT COMPARISON
+function demoStrictCompare(val){
+    if(val==='7'){
+        return "the number is Equal";
+    }
+    else{
+        return "the number is different";
+    }
+}
+console.log(demoStrictCompare('7'));
+
+//comparing different values
+function camparevalues(a,b){
+    if(a===b){
+        return "it is equal";
+    }else{
+        return "it is different";
+    }
+}
+console.log(camparevalues(10,"10"));
+
+//Inequality 
+function inequalDemo(a,b){
+    if(a!=b){
+        return "a is not equal to b";
+    }else{
+        return "a is equal to b";
+    }
+}
+console.log(inequalDemo(10,4));
+
+//logical AND
+function greaterThan(val){
+    if(val<100 && val>10){
+        return "the num is between 100 and 10";
+    }
+    
+    return "10 or under";
+}
+console.log(greaterThan(180));
+
+//logical OR operation
+
+function greaterThan(val){
+    if(val<100 || val>10){
+        return "the num is between 100 and 10";
+    }
+    
+    return "10 or under";
+}
+console.log(greaterThan(180));
+
+//greater than or Equal
+function demoGreaterOrEqual(val){
+    if(val>=20){
+        return "20 or over";
+    }if(val>=10){
+        return "10 or over";
+    }
+    return "less than 10";
+}
+console.log(demoGreaterOrEqual(21));
+
+//less than or  Equal
+function demoLessOrEqual(val){
+    if(val<=20){
+        return "20 or over";
+    }if(val<=10){
+        return "10 or over";
+    }
+    return "more than 20";
+}
+console.log(demoLessOrEqual(21));
+
+function testOfficial(val){
+    if(val<=50){
+        if(val>=25){
+            return "between 25 and 50";
+        }
+    }
+    return "anything else";
+}
+console.log(testOfficial(70));
+
+function testLogicalOr(val){
+    if(val<10 || val>20){return "outside";}
+    return "inside";
+}
+console.log(testLogicalOr(10));
+
+//else if statements
+function testLogicalOr1(val){
+    if(val<10 || val>20){return "outside";}
+    else{return "inside";}
+}
+console.log(testLogicalOr1(10));
+
+//Else if
+function testElseif(val){
+    var result="";
+    if(val>10){
+        return "Bigger than 10";
+    }
+    else if(val<5){
+        return "smaller than 5";
+     }else{
+         return "between 5 and 10";
+     }
+     return result;        
+}
+console.log(testElseif(7));
+
+//chaining else if
+function reSize(num){
+    if(num<5){
+        return "tiny";
+    }else if(num<10){
+        return "small";
+    }else if(num<15){
+        return "medium";
+    }else if(num<20){
+        return "large";
+    }else {
+        return "Huge";
+    }
+}
+console.log(reSize(2));
+
+//Golf code
+var names=["hole-in-one","Eagle","Birdie","Par","Bogey","Double Bogey","Go Home"];
+function golfScore(par,strokes){
+    if(strokes==1){
+        return names[0];
+    }else if(strokes==par-2){
+        return names[1];
+    }else if(strokes==par-1){
+        return names[2];
+    }else if(strokes==par){
+        return names[3];
+    }else if(strokes==par+1){
+        return names[4];
+    }else if(strokes==par+2){
+        return names[5];
+    }else if(strokes==par+3){
+        return names[6];
+    }
+    
+}
+console.log(golfScore(3,5));
+
+//switch statments
+function caseSwitchDemo(val){
+    var ans="";
+    switch(val){
+        case 1:
+            ans="alpha";
+            break;
+        case 2:
+            ans =" beta";
+            break;
+        case 3:
+            ans="gamma";
+            break;
+        case 4:
+            ans =" Delta";
+            break;  
+        default:
+            ans="underfined";
+            break;     
+    }
+    return ans;
+}
+console.log(caseSwitchDemo(4));
+
+//multiple case study
+function sequentialOrder(val){
+    var ans="";
+    switch(val){
+    case 1:
+    case 2:
+    case 3:
+    ans="low";
+    break;
+    case 4:
+    case 5:
+    case 6:
+    ans ="Medium";
+    break;
+    case 7:
+    case 8:
+    case 9:
+    ans ="Large";
+    break;
+    default:
+    ans="Huge";
+    break;
+    }
+    return ans;
+}
+console.log(sequentialOrder(7));
