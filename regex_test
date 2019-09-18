@@ -1,0 +1,139 @@
+var sentence="The dog chased the cat."
+var regex= /the/
+var result=regex.test(sentence);
+console.log(result);
+
+var myString ="Hello World"
+var myRegex= /Hello/
+var myResult=myRegex.test(myString);
+console.log(myResult);
+
+var petString="james has a pet cat"
+var petRegex= /dog|cat|bird|fish/
+var petResult=petRegex.test(petString);
+console.log(petResult);
+
+var myString="freeFoodNow"
+var myRegex= /freefoodnow/i;
+var myResult=myRegex.test(myString);
+console.log(myResult);
+
+//Exact Matches
+var exactString="Extract the word 'coding' from the string";
+var codingRegex= /coding/
+var result=exactString.match(codingRegex);
+console.log(result);
+
+var testStr=" Repeat, repeat, Repeat";
+var myRegex= /Repeat/ig;
+console.log(testStr.match(myRegex));
+
+var humStr=" I'll hum a song wsun i am having hun";
+var hugstr=" Bear hug";
+var huRegex= /hu./g;
+console.log(humStr.match(huRegex));
+console.log(hugstr.match(huRegex));
+var huRegex1= /.un|hu./g;
+console.log(humStr.match(huRegex1));
+
+//match single character with Multiple possibilities
+var myString= "beware of Internet 2 group"
+var regex= /[aeiou]/ig;
+console.log(myString.match(regex));
+
+//match letters of the alphabet
+var myString="beware of Internet 2 group";
+var regex= /[a-z]/ig;
+console.log(myString.match(regex));
+
+//match numbers and letters
+var sample="blueberry 3.141592 are delicious";
+var regex= /[2-6h-s]/ig;
+console.log(sample.match(regex));
+
+//match single characters not specified
+var sample= "3 blind mice"
+var regex= /[^0-9aeiou]/ig;
+console.log(sample.match(regex));
+
+//match characters that occur one or more times
+var sample="mississippis";
+var regex= /s+/g;
+console.log(sample.match(regex));
+
+//match character that occur Zero or more times
+var soocer="gggggooo!!!!"
+var phrase ="gut feeling"
+var ophrase="over the moon"
+var regex= /g*/g;
+console.log(soocer.match(regex));
+console.log(phrase.match(regex));
+console.log(ophrase.match(regex));
+
+var Quote="Aaaargh!";
+var regex= /Aa*/;
+console.log(Quote.match(regex))
+
+//find characters with lazy matching and greedy
+var sentence="titantic";
+var regex= /t[a-z]*?i/;
+console.log(sentence.match(regex));
+
+var text="<h1> Winter is coming</h1>";
+var regex= /<.*>/;
+console.log(text.match(regex))
+
+//find one or more criminals in HUNT
+var sentence= 'P1p2p3p4p5p6ccccp7p8p9';
+var regex= /c+/;
+console.log(sentence.match(regex))
+
+//Match beginning string patterns
+var sen="Cal and Ricky both like racing Ricky";
+var regex= /^Cal/;
+var regex1= /Ricky$/;
+console.log(sen.match(regex))
+console.log(regex.test(sen))
+console.log(regex1.test(sen))
+
+//Match all letters and numbers
+ var sample = "the five boxing wizards jmpquickly";
+ var regex= /\w/g;
+console.log(sample.match(regex));
+
+//match all numbers
+var sample = " your sandwich will be $5.00";
+var regex= /\d/g;
+console.log(sample.match(regex));
+
+var sample = " your sandwich will be $5.00";
+var regex= /\w/g;
+console.log(sample.match(regex));
+
+// Restrict Possible Usernames
+// 1) if there are numbers, they must be at the end
+// 2) Letters can be lowercase and uppercase
+// 3) At least two characters long. Two-letters names cant have numbers.
+
+var sentence ="jackOfAll3Traders2"
+var regex = /^[A-Za-z]{2,}\d*$/;
+console.log(regex.test(sentence))
+
+//match whitespace
+var sentence = "Whitepace is important in separating words";
+var regex = /\S/g;
+console.log(sentence.match(regex));
+
+// specify Upper and lower number of matches
+var sen = "Ohhh no";
+var regex= /Oh{3,6} no/;
+console.log(regex.test(sen))
+
+var sen = "Hazzzzah";
+var regex= /z{4,}/;
+console.log(regex.test(sen))
+
+//exact number of matches
+let sen1 = "Timmmmmber";
+var reg = /Tim{5}ber/;
+console.log(reg.test(sen1))
